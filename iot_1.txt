@@ -1,0 +1,17 @@
+#include <DHT.h>  
+#include <ESP8266WiFi.h>  
+#include <WiFiClient.h>  
+#include <ThingSpeak.h>
+
+
+
+#define DHTPIN D4  
+#define DHTTYPE DHT11  
+DHT dht(DHTPIN, DHTTYPE);  
+
+const char* ssid = "heyyo";  
+const char* password = "azzdream1";  
+WiFiClient client;  
+unsigned long myChannelNumber = 802524;  
+const char * myWriteAPIKey = "UTFJPTOKE1KNS0X7";  
+uint8_t temperature;
